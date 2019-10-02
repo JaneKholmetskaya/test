@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="ready-css/all.min.css" />
+    <title>Cascade</title>
+  </head>
+  <body>
+    <header>
+      <nav class="wrapper">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="#personal-info" class="nav-list-item-link"
+              >Личная информация</a
+            >
+          </li>
+          <li class="nav-list-item">
+            <a href="#experience" class="nav-list-item-link">Опыт</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#JS-skill" class="nav-list-item-link">JavaScript</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#about" class="nav-list-item-link">О себе</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- <img class="bg-icon" src="./icons/img.png" alt="" /> -->
+      <div class="bg-icon"></div>
+      <form id="form">
+        <!-- profile header -->
+        <div class="wrapper flex-column form-header">
+          <h1>Анкета</h1>
+        </div>
+
+        <!-- personal info -->
+        <div class="wrapper flex-column info">
+          <a name="personal-info"><img src="./icons/info-icon.png" alt=""/></a>
+          <h3 class="info-h">Личная информация</h3>
+
+          <div class="group">
+            <input
+              class="info-input"
+              type="text"
+              id="name"
+              required="required"
+              name="name"
+            />
+            <label class="info-label" for="name">ФИО</label>
+          </div>
+
+          <div class="select_mate" data-mate-select="active">
+            <select name="date" onchange="" onclick="return false;" id="">
+              <option class="option" selected disabled>Год рождения</option>
+              <option class="option" value="1">2020</option>
+              <option class="option" value="2">2019</option>
+              <option class="option" value="3">2018</option>
+              <option class="option" value="4">2017</option>
+              <option class="option" value="5">2016</option>
+              <option class="option" value="6">2015</option>
+              <option class="option" value="8">2013</option>
+              <option class="option" value="7">2014</option>
+              <option class="option" value="9">2012</option>
+              <option class="option" value="10">2011</option>
+              <option class="option" value="11">2010</option>
+              <option class="option" value="12">2009</option>
+              <option class="option" value="13">2008</option>
+              <option class="option" value="14">2007</option>
+              <option class="option" value="15">2006</option>
+              <option class="option" value="16">2005</option>
+              <option class="option" value="17">2004</option>
+              <option class="option" value="18">2003</option>
+              <option class="option" value="19">2002</option>
+              <option class="option" value="20">2001</option>
+              <option class="option" value="21">2000</option>
+              <option class="option" value="22">1999</option>
+              <option class="option" value="23">1998</option>
+              <option class="option" value="24">1997</option>
+              <option class="option" value="25">1996</option>
+              <option class="option" value="26">1995</option>
+              <option class="option" value="27">1994</option>
+              <option class="option" value="28">1993</option>
+              <option class="option" value="29">1992</option>
+              <option class="option" value="30">1991</option>
+              <option class="option" value="31">1990</option>
+              <option class="option" value="32">1989</option>
+              <option class="option" value="33">1988</option>
+              <option class="option" value="34">1987</option>
+              <option class="option" value="35">1986</option>
+              <option class="option" value="36">1985</option>
+              <option class="option" value="37">1984</option>
+              <option class="option" value="38">1983</option>
+              <option class="option" value="39">1982</option>
+              <option class="option" value="40">1981</option>
+              <option class="option" value="41">1980</option>
+            </select>
+            <p class="selecionado_opcion" onclick="open_select(this)"></p>
+            <span onclick="open_select(this)" class="icon_select_mate"
+              ><svg
+                fill="#000000"
+                height="24"
+                viewBox="0 0 24 24"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z" />
+                <path d="M0-.75h24v24H0z" fill="none" />
+              </svg>
+            </span>
+            <div class="cont_list_select_mate">
+              <ul class="cont_select_int"></ul>
+            </div>
+          </div>
+
+          <div class="group">
+            <input
+              class="info-input"
+              type="text"
+              id="place"
+              required="required"
+              name="place"
+            />
+            <label class="info-label" for="place">Место проживания</label>
+          </div>
+
+          <div class="group">
+            <input
+              class="info-input"
+              type="text"
+              id="skype"
+              required="required"
+              name="skype"
+            />
+            <label class="info-label" for="skype">Skype</label>
+          </div>
+
+          <div class="group">
+            <input
+              class="info-input"
+              type="text"
+              id="email"
+              required="required"
+              name="email"
+            />
+            <label class="info-label" for="email">E-mail</label>
+          </div>
+        </div>
+
+        <!-- experience -->
+        <div class="wrapper flex-column exp">
+          <a name="experience"><img src="./icons/exp-icon.png" alt=""/></a>
+          <h3 class="exp-h">Расскажите о своем опыте</h3>
+
+          <div class="exp-row">
+            <div class="exp-col">
+              <label class="check-label"
+                >БЭМ/OOCSS
+                <input type="checkbox" name="skill1" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="check-label"
+                >Stylus/LESS/SASS
+                <input type="checkbox" name="skill2" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="check-label"
+                >Работаю с SVG
+                <input type="checkbox" name="skill3" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <div class="exp-col">
+              <label class="check-label"
+                >Верстаю семантично
+                <input type="checkbox" name="skill4" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="check-label"
+                >ES2015/ES2016
+                <input type="checkbox" name="skill5" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="check-label"
+                >Gulp/GRUNT
+                <input type="checkbox" name="skill6" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+
+            <div class="exp-col">
+              <label class="check-label"
+                >Webpack
+                <input type="checkbox" name="skill7" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="check-label"
+                >jQuery
+                <input type="checkbox" name="skill8" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="check-label"
+                >Ипользую Git
+                <input type="checkbox" name="skill9" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- JS-skill -->
+        <div class="wrapper flex-column skill">
+          <a name="JS-skill"> <img src="./icons/js-icon.png" alt=""/></a>
+          <h3 class="skill-h">Уровень владения JavaScript</h3>
+
+          <div class="slider-label">
+            <p class="slider-label-p sl-1">Не владею</p>
+            <p class="slider-label-p sl-2">Использую готовые решения</p>
+            <p class="slider-label-p sl-3">
+              Использую готовые решения и умею и переделывать
+            </p>
+            <p class="slider-label-p sl-4">Пишу сложный JS с нуля</p>
+          </div>
+
+          <div class="slider-container">
+            <img class="slider-bg" src="./icons/sliderBG.png" alt="" />
+            <div class="slider-grey"></div>
+            <div class="slider-gradient"></div>
+
+            <input
+              type="range"
+              id="chs-skill"
+              oninput="rangeSkill()"
+              name="js skill"
+            />
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="wrapper flex-column about">
+          <a name="about"><img src="./icons/about-icon.png" alt=""/></a>
+          <h3 class="about-h">Расскажите о себе</h3>
+          <p class="about-p">
+            Напишите несколько предложений, чем привлекла наша вакансия и что вы
+            ожидаете от работы у нас.
+          </p>
+
+          <textarea
+            class="about-input"
+            name="Text-about"
+            cols="40"
+            rows="6"
+            placeholder="Понравилась тем, что..."
+          ></textarea>
+        </div>
+
+        <div class="wrapper flex-column">
+          <button class="sbm-btn" type="submit">Готово</button>
+        </div>
+      </form>
+    </main>
+    <script src="./ready-js/jquery.min.js"></script>
+    <script src="./ready-js/scripts.min.js"></script>
+  </body>
+</html>
